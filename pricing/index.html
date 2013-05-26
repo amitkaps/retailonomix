@@ -1,0 +1,417 @@
+<!DOCTYPE html>  
+<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<title>Pricing in Retail</title>
+
+		<meta name="description" content="A Presentation on Pricing">
+		<meta name="author" content="Amit Kapoor">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		
+		<link type="text/css" rel="stylesheet" href="../assets/css/bootstrap.css" />   	
+		<link rel="stylesheet" href="../assets/css/custom_pres.css">
+		<link rel="stylesheet" type="text/css"
+		href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+		<link rel="stylesheet" href="../assets/css/reveal.css">
+		<link rel="stylesheet" href="../assets/css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../assets/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../assets/css/print/' 
+			+ ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) 
+			+ '.css" type="text/css" media="print">' );
+		</script>	
+		
+		<!-- For D3.js Visuals -->
+		<script type="text/javascript" src="../assets/js/d3.v2.js"></script>
+
+
+	</head>
+	
+	<body onload="setUpTangle();">
+		
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+
+					<h1>Pricing in Retail</h1>
+					<h3>A data driven discussion</h3>
+					<br/>
+					<p>Amit Kapoor </p>
+					<i><small><a href="http://amitkaps.com">amitkaps.com</a> /
+					          <a href="http://twitter.com/amitkaps">@amitkaps</a>
+					   </small>
+					</i>
+
+				</section>
+				
+				<section>
+					<h2>Topics</h2>
+					<br/>
+					<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+					<a href="#/2"> Context </a> </h3>
+
+					<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+					<a href="#/3"> Importance </a> </h3>
+					
+					<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+					<a href="#/4"> Challenges </a> </h3>
+					
+					<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+					<a href="#/5"> Approaches </a> </h3>
+
+				</section>
+				
+				<!-- Context Sections -->
+				<section>
+					<section>
+						<h2>Retail Context</h2>
+						<br/>
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/2/1"> Personal </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/2/2"> Local </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/2/3"> Evolving </a> </h3>
+
+					
+					</section>
+					
+					<section>
+						<h2>Retail is Personal</h2>
+						<br/>
+						<p>"Moment of Truth” happens on the shelf on aisle 5!
+						   </p>
+						   
+						<svg width="750" height="500" >
+           					 <polygon class="blue4"
+            					points="150,20 600,20 575,80 175,80" />
+           					 <polygon class="blue4"
+            					points="185,120 565,120 540,180 210,180" />
+           					 <polygon class="blue4"
+            					points="220,220 530,220 505,280 245,280" />
+           					 <polygon class="blue4"
+            					points="255,320 495,320 470,380 280,380" />
+        
+							<text x="275" y="60" font-size="25">
+								Consider / Decides </text>
+							<text x="275" y="160" font-size="25" >
+								Evaluate / Research </text>
+							<text x="305" y="260" font-size="25" class="signal_red">
+								Select / Buy </text>
+							<text x="310" y="360" font-size="25">
+								Experience </text>
+						</svg>
+						
+					</section>
+					
+					<section>
+						<h2>Retail is Local</h2>
+						<img src="../assets/img/local.png"></img>
+					</section>
+					
+					<section>
+						<h2>Retail is Evolving</h2>
+						<img src="../assets/img/evolving1.png"></img>
+					</section>
+				</section>
+				
+				<!-- Importance - Lenses Sections -->
+				<section>
+					<section>
+						<h2>Importance of pricing</h2>
+						<br/>
+						<p>
+							We will use three lenses to look at this.
+						</p>
+
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/3/1"> Capabilities </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/3/2"> Profitability </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/3/6"> Impact </a> </h3>
+							
+					</section>
+					
+					<section>
+						<h2>Capabilities Lens</h2>
+						<img src="../assets/img/capabilities.png"></img>
+					</section>
+					
+					<section>
+						<h2>Profitability Lens</h2>
+						<img src="../assets/img/profitability.png"></img>
+					</section>
+					
+					<section>
+						<h2>Profitability Lens</h2>
+						<img src="../assets/img/zara.png"></img>
+					</section>
+							
+					<section>
+						<h2>Profitability Lens</h2>
+						<br/>
+						<p> Q ratio = Market Cap / Tangible Assets </p>
+						<img src="../assets/img/q-product.png"></img>
+					</section>
+					
+					<section>
+						<h2>Profitability Lens</h2>
+						<br/>
+						<p> Q ratio = Market Cap / Tangible Assets </p>
+						<img src="../assets/img/q-format.png"></img>
+					</section>
+					
+					<section>
+						<h2>IMPACT Lens</h2>
+						<img src="../assets/img/impact1.png"></img>
+					</section>
+					
+					<section>
+						<h2>Impact Lens</h2>
+						<img src="../assets/img/impact.png"></img>
+					</section>
+				</section>
+
+				<section>		
+					<section>
+						<h2>Pricing Challenges</h2>
+						<br/>
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/4/1"> Policy and Level </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/4/3"> Insight </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/4/6"> Tool Box </a> </h3>
+
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/4/7"> Process and Governance </a> </h3>
+
+					
+					</section>
+	
+					<section>
+						<h2>Policy Challenges</h2>
+						<br/>
+						<ul>
+							<li><strong>Rule based </strong> </li>
+							<ul>
+								<li>Based on cost plus margin; driven by supplier pricing</li>
+								<li>Based on rigid guidelines – strict Hi-Lo</li>
+							</ul>
+							<br/>
+							<li><strong>Competition based</strong> – Matching / follower strategies</li>
+							<br/>
+							<li><strong>Customer based</strong> – Targeting the average customer</li>
+						</ul>
+					</section>
+	
+					<section>
+						<h2>Setting the Right Price</h2>
+						<p>
+						<img src="../assets/img/policy.png"></img>
+						</p>
+					</section>
+					
+					<section>
+						<h2>Elasticity - Simple</h2>
+						<p>
+						<img src="../assets/img/insight.png"></img>
+						</p>
+					</section>
+					
+					<section>
+						<h2>Elasticity - Pooling</h2>
+						<p>
+						<img src="../assets/img/insight2.png"></img>
+						</p>
+					</section>
+
+					<section>
+						<h2>Insight - Not that Easy</h2>
+						<br/>
+						<ul>
+							<li> Elasticity </li> 
+							<ul>
+								<li> Demand Model </li>
+								<li> Probing or Trials </li>
+								<li> Pooling with and without cross-elasticity </li>
+							</ul>
+							<li> Lifecycle Price Decay Curves </li>
+							<li> Cannibalization Factors </li>
+							<li> Conjoint Analysis </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Tools Challenges</h2>
+						<img src="../assets/img/tools.png"></img>
+					</section>
+
+					<section>
+						<h2>Process & Governance</h2>
+						<ul>
+							<li><strong>Process</strong> </li>
+							<ul>	
+								<li>Trader mentality – limited structure and guidelines </li>
+								<li>X-functional engagement (Marketing, planning, channels) </li>
+								<li>Lack of alignment to category / brand strategy </li>
+							</ul>	
+							<br/>
+							<li><strong>Governance </strong></li>
+							<ul>	
+								<li>Limited governance on pricing management / leakage </li>
+								<li>Driven through overall margin KPIs –reward and incentives 
+								aligned to them </li>
+							</ul>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Approaches</h2>
+						<br/>
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/5/1"> Trolley Pricing </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/5/2"> Tesco Clubcard </a> </h3>
+						
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/5/3"> Next Best Offer </a> </h3>
+
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/5/4"> Aldi Discounter </a> </h3>
+
+						<h3> <img src="../assets/img/glyphicons/glyphicons_027_search.png"></img>
+						<a href="#/5/5"> John Lewis </a> </h3>
+					
+					</section>
+				
+					<section>
+						<h2>Trolley Pricing</h2>
+						<img src="../assets/img/trolley.png"></img>
+					</section>
+					
+					<section>
+						<h2>Tesco Clubcard</h2>
+						<br/>						
+						<p> POS Driven Analytics - Tesco / Dunnhumby 
+						<img src="../assets/img/tesco.png"></img>
+						<ul>
+							<li>Segmented customer base + Loyalty tiers </li>
+							<li>7 million coupon price promotion; 10x effectiveness </li>
+							<li>Linking POS analytics to availability </li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Next Best Offer</h2>
+						<img src="../assets/img/nbo.png"></img>
+					</section>
+					
+					<section>
+						<h2>Aldi Discounter</h2>
+						<img src="../assets/img/aldi.png"></img>
+					</section>
+					
+					
+					<section>
+						<h2>John Lewis</h2>
+					<br/>
+					<div class = "row">	
+					<div class="span7">
+
+					<p>Price Protection and Guarantee </p>
+					<ul>
+						<li> Will match any advertised pricing for a similar in–stock product by a “conventional shop” </li>
+						<li> Will refund the price difference up to 28 days from the date of purchase </li>	
+					</ul>
+					</div>
+					
+					<div class="span4">
+						<img src="../assets/img/johnlewis.png"></img>
+					</div>
+					</div>
+					</section>
+					
+				</section>
+
+
+
+				
+				<section>
+					<h2>Credits</h2>
+					<br>
+					<ul>
+						<li> More about me at <a href="http://amitkaps.com" target="_blank">
+							 amitkaps.com</a></li>
+						<li>Presentation available at 
+							<a href="https://main.retailonomix.com" target="_blank">main.retailonomix.com</a></li>
+						<li>Made using <a href="http://lab.hakim.se/reveal-js">Reveal.js</a></li>
+					</ul>
+				</section>
+
+			</div>
+			
+		</div>
+
+		<script src="../assets/js/head.min.js"></script>
+		<script src="../assets/js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../assets/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: '../assets/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../assets/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: '../assets/plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+			
+		</script>
+		
+		<!-- For Tangle JS -->
+		<script type="text/javascript" src="../assets/js/Tangle.js"></script>
+		<link rel="stylesheet" href="../assets/js/TangleKit/TangleKit.css" type="text/css">
+    	<script type="text/javascript" src="../assets/js/TangleKit/mootools.js"></script>
+    	<script type="text/javascript" src="../assets/js/TangleKit/sprintf.js"></script>
+    	<script type="text/javascript" src="../assets/js/TangleKit/BVTouchable.js"></script>
+		<script type="text/javascript" src="../assets/js/TangleKit/TangleKit.js"></script>
+		<script type="text/javascript" src="../assets/js/demo_tangle.js"></script>
+		
+
+	</body>
+</html>

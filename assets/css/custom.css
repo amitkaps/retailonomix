@@ -1,0 +1,39 @@
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+section {
+	  padding-top: 30px;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  height: 400px;
+}
+
+.well-tab {
+  height: 300px;
+}
+
+.error {
+	color: red
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
