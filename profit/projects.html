@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+<!-- ==== Topics Covered ==== -->  
+<section id="topics">
+	<div class="page-header">
+		<h1>Start with Testing D3js <small>Click any to see details</small></h1>
+	</div>
+
+	<div id="d3demo">
+		<svg width="1000" height="500">
+     		<rect x="0" y="0" width="500" height="50"/>
+     		<polygon fill="lime" stroke="blue" stroke-width="10" 
+            points="850,75  958,137.5 958,262.5
+                    850,325 742,262.6 742,137.5" />
+        </svg>
+        <svg width="1000" height="500">
+            <polygon fill="lime" stroke="blue" stroke-width="2" 
+            		points="150,25  600,25 
+            				575,75 175,75" />
+        
+            <text x="250" y="150" font-size="25" 
+            fill="blue" >
+    			Hello, out there 
+    		</text>
+                    
+		</svg>
+		<script type="text/javascript" src="../assets/js/demo.js"></script>
+	</div>
+	
+	
+	<html>
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1');   // Don't need to specify chart libraries!
+      google.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'ColumnChart',
+          dataTable: [['', 'Germany', 'USA', 'Brazil', 'Canada', 'France', 'RU'],
+                      ['', 700, 300, 400, 500, 600, 800]],
+          options: {'title': 'Countries'},
+          containerId: 'vis_div'
+        });
+        wrapper.draw();
+      }
+    </script>
+  <div id="bd" style="font-family: Arial;border: 0 none;">
+    <div id="vis_div" style="width: 600px; height: 400px;"></div>
+  </div>
+</html>
+	
+	<div id="cCalc">
+						   When you eat <span  data-var="cookies" class="TKAdjustableNumber"> cookies</span>
+						   , you consume <b data-var="calories"> calories</b>.
+   						   That's <span data-var="dailyPercent" data-format="%.0f">%</span>
+   						   of your recommended daily calories.
+   						</div>
+	
+	
+</section>
+<br>
+<br>
+
+{% endblock %}
